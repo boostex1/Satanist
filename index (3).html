@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boostek</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #ccc;
+            overflow: hidden;
+        }
+
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 2;
+        }
+
+        .avatar img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #ccc;
+            object-fit: cover;
+        }
+
+        .link {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .link:hover {
+            color: #fff;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .btn-new {
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            background: none;
+            border: 1px solid #ccc;
+            color: #ccc;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-new:hover {
+            background: #ccc;
+            color: #000;
+        }
+
+        .btn-new:after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 200px;
+            background: #fff;
+            opacity: 0.5;
+            position: absolute;
+            left: -40px;
+            top: -100px;
+            transform: rotate(45deg);
+            animation: slideme 3s ease-in-out infinite;
+        }
+
+        @keyframes slideme {
+            0% {
+                left: -30px;
+                margin-left: 0px;
+            }
+            30% {
+                left: 110%;
+                margin-left: 80px;
+            }
+            100% {
+                left: 110%;
+                margin-left: 80px;
+            }
+        }
+
+        .about-container {
+            margin-top: 30px;
+            background: rgba(50, 50, 50, 0.7);
+            border: 2px solid #fff;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .about-container hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="avatar">
+           <img src="https://i.postimg.cc/4dM1dkqF/14bac078c185fd23559738576dc2a669.jpg" alt="My Avatar">
+        </div>
+        <a href="https://t.me/codermasochist" class="link">@Cryptomanboy1</a>
+        <div class="buttons">
+            <button class="btn-new" onclick="window.open('https://t.me/infobyboost')">Channel</button>
+        </div>
+        <div class="about-container">
+            <strong>About Boostek`s:</strong>
+            <hr>
+            <p>Name: Mark</p>
+            <p>Nickname: Boostek.</p>
+            <p>Age 17 y. o.</p>
+            <p>Gender: Male | he/him</p>
+            <p>Hobbies: anime & sleep.</p>
+        </div>
+    </div>
+     <video autoplay muted loop id="bg-video" preload="auto">
+        <source src="https://0x0.st/8PC3.mp4" type="video/mp4">
+     </video>
+</body>
+</html>
